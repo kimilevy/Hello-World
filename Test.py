@@ -25,5 +25,5 @@ def get_first_run_count():
         result = cursor.fetchone()  # Retrieve the first row
         return result[0] if result else None  # Return the count or None if no result
 
-SQL_Query = result[0]       
+SQL_Query = "checking"     
 AWS_SECRET_ACCESS_KEY='wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
