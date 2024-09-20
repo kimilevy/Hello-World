@@ -18,6 +18,8 @@ def initialize_db():
                 count INTEGER
             )
         ''')
-        cursor.execute
+        cursor.execute ('Insert')
+        conn.commit()
+        conn.close()
 
 AWS_SECRET_ACCESS_KEY='wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
