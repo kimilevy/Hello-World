@@ -22,4 +22,15 @@ def initialize_db():
         conn.commit()
         conn.close()
 
+def update_run_counter(new_count):
+    conn = get_db_connection()
+    if conn is not None:
+        cursor = conn.cursor()
+
+        # Update the count
+        cursor.execute('UPDATE run_counter SET count = ? WHERE rowid = 1', (new_count,))
+
+        conn.commit()  # Save the changes
+        conn.close()
+
 AWS_SECRET_ACCESS_KEY='wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
